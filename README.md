@@ -4,10 +4,8 @@ A demonstration of the difference between gRPC unary and streaming modes, focusi
 
 ## The Difference
 
-| Mode | How it works | Memory usage |
-|------|--------------|---------------|
-| **Unary** | Loads entire file into memory, then sends | Grows to ~file size |
-| **Streaming** | Sends file in chunks incrementally | Stays at ~chunk size |
+- **Unary** — Loads entire file into memory, then sends → Grows to ~file size
+- **Streaming** — Sends file in chunks incrementally → Stays at ~chunk size
 
 ## Quick Start
 
