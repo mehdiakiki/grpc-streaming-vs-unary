@@ -4,8 +4,8 @@ A demonstration of the difference between gRPC unary and streaming modes, focusi
 
 ## The Difference
 
-- **Unary** — Loads entire file into memory, then sends → Grows to ~file size
-- **Streaming** — Sends file in chunks incrementally → Stays at ~chunk size
+- **Unary**: Loads entire file into memory, then sends → Grows to ~file size
+- **Streaming**: Sends file in chunks incrementally → Stays at ~chunk size
 
 ## Quick Start
 
@@ -33,8 +33,8 @@ go run ./cmd/client -mode stream -file test.bin -chunk 1048576
 
 ## When to Use Each
 
-**Unary** - Simple, good for small requests
-**Streaming** - Large files, real-time data, memory-constrained environments
+- **Unary** - Simple, good for small requests
+- **Streaming** - Large files, real-time data, memory-constrained environments
 
 ## Files
 
