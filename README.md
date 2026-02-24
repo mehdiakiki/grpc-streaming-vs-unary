@@ -33,18 +33,6 @@ go run ./cmd/client -mode stream -file test.bin -chunk 1048576
 
 ![Example output](https://github.com/user-attachments/assets/8d9dcec2-acc9-4b9f-a798-7ef39d5be3c6)
 
-```
---- Unary ---
-Start: Alloc=389 KB
-After read: Alloc=102805 KB  ← entire file in memory
-Done: Alloc=205434 KB
-
---- Streaming ---
-Start: Alloc=389 KB
-After open: Alloc=402 KB
-Done: Alloc=6821 KB  ← only chunk buffer
-```
-
 ## When to Use Each
 
 **Unary** - Simple, good for small requests
