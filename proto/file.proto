@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package filetransfer;
+
+option go_package = "github.com/you/grpc-chunk-vs-unary/pb;pb";
+
+message File {
+  bytes data = 1;
+}
+
+message Chunk {
+  bytes data = 1;
+}
+
+message UploadStatus {
+  bool ok = 1;
+  int64 bytes_received = 2;
+}
+
+service FileService {
+  rpc UploadUnary(File) returns (UploadStatus);
+  rpc UploadStream(stream Chunk) returns (UploadStatus);
+}
