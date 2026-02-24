@@ -31,6 +31,8 @@ go run ./cmd/client -mode stream -file test.bin -chunk 1048576
 
 ## Expected Output
 
+![Example output](https://github.com/user-attachments/assets/8d9dcec2-acc9-4b9f-a798-7ef39d5be3c6)
+
 ```
 --- Unary ---
 Start: Alloc=389 KB
